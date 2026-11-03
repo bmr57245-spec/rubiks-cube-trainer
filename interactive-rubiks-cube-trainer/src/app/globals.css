@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@import "@fontsource-variable/cairo";
+
+@theme inline {
+  --font-sans: "Cairo Variable", "Segoe UI", Tahoma, system-ui, sans-serif;
+  --color-ink: #070b16;
+  --color-panel: #0f1629;
+  --color-line: #1f2a44;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(255, 212, 0, 0.1), transparent 60%),
+    radial-gradient(900px 500px at 0% 10%, rgba(0, 87, 184, 0.22), transparent 60%),
+    radial-gradient(800px 500px at 50% 110%, rgba(215, 25, 32, 0.12), transparent 60%),
+    #070b16;
+  background-attachment: fixed;
+  color: #e6ebf7;
+  min-height: 100vh;
+}
+
+::selection {
+  background: #ffd400;
+  color: #111;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(20, 29, 52, 0.85), rgba(12, 18, 34, 0.9));
+  border: 1px solid #1f2a44;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.85rem;
+  padding: 0.6rem 1.15rem;
+  font-weight: 700;
+  transition: all 0.15s ease;
+  border: 1px solid #2a3858;
+  background: #131c33;
+  color: #e6ebf7;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #1a2542;
+  border-color: #3a4d78;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #ffd400, #ff9d00);
+  color: #1a1200;
+  border-color: transparent;
+  box-shadow: 0 6px 24px rgba(255, 190, 0, 0.25);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ffe033, #ffad1f);
+  border-color: transparent;
+}
+.btn-green {
+  background: linear-gradient(135deg, #00a651, #00c060);
+  color: #fff;
+  border-color: transparent;
+}
+.btn-green:hover {
+  background: linear-gradient(135deg, #00b95b, #14d070);
+  border-color: transparent;
+}
+.btn-red {
+  background: linear-gradient(135deg, #d71920, #ef3a40);
+  color: #fff;
+  border-color: transparent;
+}
+.btn-red:hover {
+  background: linear-gradient(135deg, #e5262d, #ff4b51);
+  border-color: transparent;
+}
+.btn-sm {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 0.65rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.alg {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  direction: ltr;
+  unicode-bidi: isolate;
+  letter-spacing: 0.02em;
+}
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.timer-digits {
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+@keyframes cube-spin {
+  from {
+    transform: rotateX(-26deg) rotateY(-36deg);
+  }
+  to {
+    transform: rotateX(-26deg) rotateY(324deg);
+  }
+}
+.cube-spin {
+  animation: cube-spin 28s linear infinite;
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+.prose-ar p {
+  line-height: 2;
+  color: #c9d3ea;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #26345a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
